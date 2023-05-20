@@ -1,6 +1,10 @@
+#Description:
+#The script prints information about which user has MFA features enabled.
+
+#Install-Module MSOnline
 Connect-MsolService
 
-#Install-module Microsoft.Graph.Identity.Signins
+#Install-Module Microsoft.Graph.Identity.Signins
 Connect-MgGraph -Scopes UserAuthenticationMethod.ReadWrite.All
 Select-MgProfile -Name beta
 
