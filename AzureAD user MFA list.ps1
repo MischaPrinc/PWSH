@@ -24,7 +24,7 @@ ForEach ($User in $Users) {
         MFAHeslo = if( (Get-MgUserAuthenticationPasswordMethod -UserId $User.UserPrincipalName).count -gt 0) { "Ano" } else { "Ne" }
         MFAEmail = if( (Get-MgUserAuthenticationEmailMethod -UserId $User.UserPrincipalName).count -gt 0) { "Ano" } else { "Ne" }
         MFATelefon = if( (Get-MgUserAuthenticationPhoneMethod -UserId $User.UserPrincipalName).count -gt 0) { "Ano" } else { "Ne" }
-        MFAMSAuthenticator = if( (Get-MgUserAuthenticationMicrosoftAuthenticatorMethod -UserId $User.UserPrincipalName).count -gt 0) { "Ano" } else { "Ne" }
+        MFAMSAuthenticator = if( (Get-MgUserAuthenticationMicrosoftAuthenticatorMethod -UserId $User.UserPrincipalName).count -gt 0) { "Ano" } else { "Ne" }
         MFAFido2 = if( (Get-MgUserAuthenticationFido2Method -UserId $User.UserPrincipalName).count -gt 0) { "Ano" } else { "Ne" }
         MFAPassLess = if( (Get-MgUserAuthenticationPasswordlessMicrosoftAuthenticatorMethod -UserId $User.UserPrincipalName).count -gt 0) { "Ano" } else { "Ne" }
 
